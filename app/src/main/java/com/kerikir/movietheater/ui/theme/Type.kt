@@ -18,4 +18,19 @@ private val RobotoFontFamily = FontFamily(
 
 
 val Typography = Typography(
+    headlineLarge = TextStyle(
+        fontFamily = RobotoFontFamily,
+        fontWeight = FontWeight.Black,
+        fontSize = 32.sp
+    ),
+    titleMedium = TextStyle(
+        fontFamily = RobotoFontFamily,
+        fontWeight = FontWeight.Bold,
+        fontSize = 18.sp
+    ),
+    bodySmall = TextStyle(
+        fontFamily = RobotoFontFamily,
+        fontWeight = FontWeight.Normal,
+        fontSize = 12.sp
+    ),
 )
