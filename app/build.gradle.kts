@@ -36,5 +36,8 @@ android {
 }
 
 dependencies {
-    
+    implementation(libs.bundles.androidx)
+    implementation(platform(libs.androidx.compose.bom))
+    debugImplementation(libs.androidx.compose.ui.tooling)
+    implementation(libs.bundles.ui)
 }
