@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.kerikir.movietheater.ui.screen.DiscoveryScreen
 import com.kerikir.movietheater.ui.theme.ApplicationTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,8 +20,12 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ApplicationTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-
+                Scaffold(
+                    modifier = Modifier.fillMaxSize()
+                ) { innerPadding ->
+                    DiscoveryScreen(
+                        modifier = Modifier.padding(innerPadding)
+                    )
                 }
             }
         }
