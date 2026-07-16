@@ -7,6 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.kerikir.movietheater.data.DiscoverScreenState
+import com.kerikir.movietheater.ui.components.section.FeatureMoviesSection
 
 
 @Composable
@@ -18,5 +19,9 @@ fun DiscoveryScreen(
         modifier = modifier
             .fillMaxSize()
             .padding(24.dp)
-    ) { }
+    ) {
+        FeatureMoviesSection(
+            data = screenState.featureMovies
+        )
+    }
 }
