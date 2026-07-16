@@ -3,14 +3,18 @@ package com.kerikir.movietheater.ui.components.section
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -95,13 +99,29 @@ private fun TimeSlotsSection(
     modifier: Modifier = Modifier,
     slots: List<String>
 ) {
-
+    Row(
+        modifier = modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(8.dp)
+    ) { }
 }
 
 
 
 @Composable
 private fun TimeSlot(
-    modifier: Modifier,
+    modifier: Modifier = Modifier,
     slot: String
-) {}
+) {
+    Surface(
+        modifier = modifier,
+        shape = RoundedCornerShape(8.dp)
+    ) {
+        Text(
+            text = slot,
+            style = MaterialTheme.typography.bodySmall,
+            modifier = Modifier
+                .fillMaxHeight()
+                .padding(10.dp)
+        )
+    }
+}
