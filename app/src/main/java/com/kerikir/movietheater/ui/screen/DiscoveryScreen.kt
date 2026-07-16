@@ -16,9 +16,7 @@ fun DiscoveryScreen(
     screenState: DiscoverScreenState
 ) {
     Column(
-        modifier = modifier
-            .fillMaxSize()
-            .padding(24.dp)
+        modifier = modifier.fillMaxSize()
     ) {
         FeatureMoviesSection(
             data = screenState.featureMovies
