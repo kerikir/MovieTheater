@@ -1,9 +1,11 @@
 package com.kerikir.movietheater.ui.components.section
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
@@ -22,12 +24,15 @@ fun FeatureMoviesSection(
     data: List<FeaturedMovieState>
 ) {
     Column(
-        modifier = modifier
+        modifier = modifier.padding(horizontal = 18.dp),
+        verticalArrangement = Arrangement.spacedBy(24.dp)
     ) {
         SectionHeader(
             text = "Featured Movies"
         )
-        LazyRow {
+        LazyRow(
+            horizontalArrangement = Arrangement.spacedBy(16.dp)
+        ) {
             items(
                 items = data,
                 key = { it.id }
