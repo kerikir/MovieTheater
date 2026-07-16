@@ -89,6 +89,12 @@ private fun FeaturedMovie(
             overflow = TextOverflow.Ellipsis,
             style = MaterialTheme.typography.bodySmall
         )
+        Spacer(
+            modifier = Modifier.height(18.dp)
+        )
+        TimeSlotsSection(
+            slots = item.timeSlots
+        )
     }
 }
 
@@ -102,7 +108,13 @@ private fun TimeSlotsSection(
     Row(
         modifier = modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.spacedBy(8.dp)
-    ) { }
+    ) {
+        slots.onEach { slot ->
+            TimeSlot(
+                slot = slot
+            )
+        }
+    }
 }
 
 
@@ -120,7 +132,6 @@ private fun TimeSlot(
             text = slot,
             style = MaterialTheme.typography.bodySmall,
             modifier = Modifier
-                .fillMaxHeight()
                 .padding(10.dp)
         )
     }
