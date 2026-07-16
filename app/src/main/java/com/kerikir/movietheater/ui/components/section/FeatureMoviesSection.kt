@@ -3,6 +3,7 @@ package com.kerikir.movietheater.ui.components.section
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -66,11 +67,23 @@ private fun FeaturedMovie(
                 .fillMaxWidth()
                 .height(324.dp)
         )
+        Spacer(
+            modifier = Modifier.height(8.dp)
+        )
         Text(
             text = item.title,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
             style = MaterialTheme.typography.titleMedium
+        )
+        Spacer(
+            modifier = Modifier.height(8.dp)
+        )
+        Text(
+            text = item.description,
+            maxLines = 3,
+            overflow = TextOverflow.Ellipsis,
+            style = MaterialTheme.typography.bodySmall
         )
     }
 }
