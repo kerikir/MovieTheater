@@ -1,5 +1,5 @@
 package com.kerikir.movietheater.data
 
 data class DiscoverScreenState(
-    val featureMovies: List<FeaturedMoviesState>
+    val featureMovies: List<FeaturedMoviesState> = FeatureMoviesData
 )

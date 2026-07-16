@@ -6,11 +6,13 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.kerikir.movietheater.data.DiscoverScreenState
 
 
 @Composable
 fun DiscoveryScreen(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    screenState: DiscoverScreenState
 ) {
     Column(
         modifier = modifier
