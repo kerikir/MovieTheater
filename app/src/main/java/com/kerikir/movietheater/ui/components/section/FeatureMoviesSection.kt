@@ -87,3 +87,21 @@ private fun FeaturedMovie(
         )
     }
 }
+
+
+
+@Composable
+private fun TimeSlotsSection(
+    modifier: Modifier = Modifier,
+    slots: List<String>
+) {
+
+}
+
+
+
+@Composable
+private fun TimeSlot(
+    modifier: Modifier,
+    slot: String
+) {}
