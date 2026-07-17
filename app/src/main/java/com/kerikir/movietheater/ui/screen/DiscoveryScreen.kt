@@ -2,10 +2,12 @@ package com.kerikir.movietheater.ui.screen
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import com.kerikir.movietheater.data.DiscoverScreenState
 import com.kerikir.movietheater.ui.components.section.ComingSoonSection
 import com.kerikir.movietheater.ui.components.section.FeatureMoviesSection
@@ -27,7 +29,8 @@ fun DiscoveryScreen(
             data = screenState.featureMovies
         )
         ComingSoonSection(
-            data = screenState.upcomingMovies
+            data = screenState.upcomingMovies,
+            modifier = Modifier.padding(horizontal = 18.dp)
         )
     }
 }
