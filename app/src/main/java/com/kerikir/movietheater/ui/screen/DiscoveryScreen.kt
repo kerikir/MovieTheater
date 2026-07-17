@@ -1,5 +1,6 @@
 package com.kerikir.movietheater.ui.screen
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -23,7 +24,8 @@ fun DiscoveryScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .verticalScroll(scrollableState)
+            .verticalScroll(scrollableState),
+        verticalArrangement = Arrangement.spacedBy(24.dp)
     ) {
         FeatureMoviesSection(
             data = screenState.featureMovies
