@@ -2,11 +2,15 @@ package com.kerikir.movietheater.ui.components.section
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.pager.HorizontalPager
+import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.kerikir.movietheater.data.MovieThumbnailState
+import com.kerikir.movietheater.ui.components.MovieThumbnail
 import com.kerikir.movietheater.ui.components.SectionHeader
 
 
@@ -16,6 +20,8 @@ fun HorizontalSection(
     data: List<MovieThumbnailState>,
     name: String
 ) {
+    val pageState = rememberPagerState(pageCount = { data.size })
+
     Column(
         modifier = modifier,
         verticalArrangement = Arrangement.spacedBy(16.dp)
@@ -24,5 +30,13 @@ fun HorizontalSection(
             text = name,
             modifier = Modifier.padding(horizontal = 18.dp)
         )
+        HorizontalPager(
+            state = pageState
+        ) { pageIndex ->
+            MovieThumbnail(
+                img = data[pageIndex].img,
+                modifier = Modifier.fillMaxWidth()
+            )
+        }
     }
 }
