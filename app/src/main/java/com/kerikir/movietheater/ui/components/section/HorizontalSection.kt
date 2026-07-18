@@ -5,9 +5,11 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.pager.HorizontalPager
+import androidx.compose.foundation.pager.PageSize
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.dp
 import com.kerikir.movietheater.data.MovieThumbnailState
 import com.kerikir.movietheater.ui.components.MovieThumbnail
@@ -38,5 +40,16 @@ fun HorizontalSection(
                 modifier = Modifier.fillMaxWidth()
             )
         }
+    }
+}
+
+
+
+private val TwoPagesPerViewport = object : PageSize {
+    override fun Density.calculateMainAxisPageSize(
+        availableSpace: Int,
+        pageSpacing: Int
+    ): Int {
+        return (availableSpace - pageSpacing) / 2
     }
 }
