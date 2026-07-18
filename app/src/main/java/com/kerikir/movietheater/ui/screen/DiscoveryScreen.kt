@@ -12,6 +12,7 @@ import androidx.compose.ui.unit.dp
 import com.kerikir.movietheater.data.DiscoverScreenState
 import com.kerikir.movietheater.ui.components.section.ComingSoonSection
 import com.kerikir.movietheater.ui.components.section.FeatureMoviesSection
+import com.kerikir.movietheater.ui.components.section.HorizontalSection
 
 
 @Composable
@@ -33,6 +34,14 @@ fun DiscoveryScreen(
         ComingSoonSection(
             data = screenState.upcomingMovies,
             modifier = Modifier.padding(horizontal = 18.dp)
+        )
+        HorizontalSection(
+            data = screenState.recentlyWatchedMovies,
+            name = "Recently Watched"
+        )
+        HorizontalSection(
+            data = screenState.streamingMovies,
+            name = "Streaming On Demand"
         )
     }
 }
