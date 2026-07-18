@@ -2,6 +2,7 @@ package com.kerikir.movietheater.ui.components.section
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.pager.HorizontalPager
@@ -33,7 +34,10 @@ fun HorizontalSection(
             modifier = Modifier.padding(horizontal = 18.dp)
         )
         HorizontalPager(
-            state = pageState
+            state = pageState,
+            pageSize = TwoPagesPerViewport,
+            pageSpacing = 18.dp,
+            contentPadding = PaddingValues(horizontal = 18.dp)
         ) { pageIndex ->
             MovieThumbnail(
                 img = data[pageIndex].img,
