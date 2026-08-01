@@ -1,2 +1,18 @@
-<img width="400" alt="Screenshot_20260718_155107_Movie Theater" src="https://github.com/user-attachments/assets/30224318-64d1-4268-b910-408eb8d5278a" />
-<img width="400" alt="Screenshot_20260718_155148_Movie Theater" src="https://github.com/user-attachments/assets/4ffcccba-e275-4f00-bc4a-b7f888612328" />
+# 🎬 Кинотеатр – UI-концепт
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Platform](https://img.shields.io/badge/Platform-Android-lightgrey)]()
+[![Version](https://img.shields.io/badge/Version-1.0-blue)]()
+
+Современный UI-прототип приложения для киноманов. Один экран объединяет афишу сеансов, ожидаемые премьеры, историю просмотров и стриминговые подборки. Всё на Jetpack Compose с плавными анимациями.
+
+---
+
+## ✨ Что внутри экрана
+
+- **🎥 Список фильмов с сеансами (LazyRow)** – горизонтальная лента фильмов, на которые можно купить билеты прямо сейчас. Для каждого отображается постер, название и ближайшие сеансы.
+- **🚀 Скоро выйдут (FlowRow)** – облако из карточек ожидаемых новинок. Адаптивный макет: карточки переносятся по строкам в зависимости от ширины экрана.
+- **🕒 Последние просмотренные (HorizontalPager)** – свайпабельная галерея фильмов, которые пользователь недавно смотрел. Каждый фильм показывает прогресс просмотра.
+- **📺 Streaming (HorizontalPager)** – ещё один пейджер с подборками фильмов, доступных на стриминговых платформах (Netflix, Кинопоиск и др.).
+
+---
