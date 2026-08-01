@@ -16,3 +16,11 @@
 - **📺 Streaming (HorizontalPager)** – ещё один пейджер с подборками фильмов, доступных на стриминговых платформах (Netflix, Кинопоиск и др.).
 
 ---
+
+## 📸 Скриншоты
+
+| Сеансы | FlowRow «Скоро» | HorizontalPager (просмотренные) |
+| :---------------------: | :-------------: | :-----------------------------: |
+| ![Афиша](screenshots/featured_movies.png) | ![Скоро](screenshots/coming_soon.png) | ![Просмотренные](screenshots/recently_watched.png) |
+
+---
